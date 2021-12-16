@@ -1,0 +1,14 @@
+footer a i {
+  font-size: 40px;
+  color: #D4AF37;
+}
+
+.copy{
+  color: #D4AF37;
+}
+
+footer
+{
+  border-top: 3px solid #D4AF37;
+  border-bottom: 3px solid #D4AF37;
+}

@@ -1,0 +1,33 @@
+<div class="container my-5 w-50">
+  <h1 class="text-center my-5">Cadastro de Contas</h1>
+      <div class="col">
+        <form action="" class="border border-5 border-dark p-5 rounded-3 bg-warning">
+          <div class="mb-1">
+            <input  type="text" class="form-control" name="nomeCliente" placeholder="Nome Completo" title="Nome Completo" [(ngModel)]="tarefa.nomeCliente">
+          </div>
+          <div class="mb-1">
+            <input   type="number" class="form-control my-3" name="valor"  placeholder="Valor" title="Valor" [(ngModel)]="tarefa.valor">
+          </div>
+          <div class="mb-1">
+            <!-- <input  type="text" class="form-control my-3" name="tipoConta" placeholder="Tipo da Conta" title="Tipo da Conta" [(ngModel)]="tarefa.tipoConta"> -->
+            <select class="form-select my-2" name="tipoConta" [(ngModel)]="tarefa.tipoConta">
+              <option value="">Selecione o tipo da conta</option>
+              <option value="Corrente PF">Corrente PF</option>
+              <option value="Corrente PJ">Corrente PJ</option>
+              <option value="Poupança PF">Poupança PF</option>
+              <option value="Poupança PJ">Poupança PJ</option>
+            </select>
+          </div>
+          <div class="mb-1">
+            <input type="text" class="form-control my-3" name="agencia" placeholder="Número da Agência" title="Número da Agência" [(ngModel)]="tarefa.agencia">
+          </div>
+          <div class="mb-1">
+            <input type="text" class="form-control my-3" name="conta" placeholder="Número da Conta" title="Número da Conta" [(ngModel)]="tarefa.conta">
+          </div>
+        <div class="text-center mt-5">
+          <button (click)='adicionar()' class="btn btn-dark">Adicionar</button>
+        </div>
+    </form>
+  </div>
+
+

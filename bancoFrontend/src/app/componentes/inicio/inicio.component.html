@@ -1,0 +1,37 @@
+<div class="container my-5">
+  <h1 class="text-center my-5">Lista de Contas</h1>
+
+<!-- <button routerLink="/add" type="button" class="btn btn-warning mb-5 float-end text-danger">Cadastrar</button> -->
+
+<table class="table table-bordered border border-5 border-dark rounded-3 text-center">
+  <thead>
+    <tr class="fs-5 bg-dark text-warning rounded-3">
+      <th scope="col">Identificação</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Valor</th>
+      <th scope="col">Tipo da Conta</th>
+      <th scope="col">Agência</th>
+      <th scope="col">Conta</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Excluir</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let tarefa of ListarTarefas" class="fs-5">
+      <td>{{tarefa.id_transacao}}</td>
+      <td>{{tarefa.nomeCliente}}</td>
+      <td>{{tarefa.valor}}</td>
+      <td>{{tarefa.tipoConta}}</td>
+      <td>{{tarefa.agencia}}</td>
+      <td>{{tarefa.conta}}</td>
+      <td>
+        <button (click)="editar(tarefa.id_transacao)" type="button" class= "btn btn-warning text-danger">Editar</button>
+      </td>
+      <td>
+        <button (click)="excluir(tarefa.id_transacao)" type="button" class= "btn btn-danger text-warning">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
